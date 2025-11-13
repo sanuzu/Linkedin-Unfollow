@@ -18,7 +18,7 @@ from selenium.common.exceptions import (
 # ----------------------------
 # Configuration
 # ----------------------------
-INTERESTS_URL = "https://www.linkedin.com/in/sanjay-prabhakar-northeastern/details/interests/?detailScreenTabIndex=0"
+INTERESTS_URL = f"https://www.linkedin.com/in/{os.getenv("LINKEDIN_URL_TAG", "")}/details/interests/?detailScreenTabIndex=0"
 COOKIES_PATH = Path("cookies.json")
 PROFILE_DIR = Path("chrome_profile")  # persists full browser cache/cookies (best for Step 2)
 LOGIN_URL = "https://www.linkedin.com/login"
